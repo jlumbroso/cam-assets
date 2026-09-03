@@ -1,0 +1,15 @@
+# NO LFS. Deliberately, and this file exists to say so.
+#
+# LFS pointers do not resolve over GitHub Pages: an LFS-tracked audio file is
+# served as a ~130-byte text stub, and every podcast client fails differently
+# with nothing reporting an error. If you are about to add a `filter=lfs` line
+# here, the file you are adding belongs somewhere else.
+#
+# The explicit unset below makes the intent enforceable rather than merely
+# documented — it prevents a global gitattributes or a well-meaning `git lfs
+# track` from quietly capturing these paths.
+* -filter -diff -merge
+*.m4a -filter -diff -merge
+*.mp3 -filter -diff -merge
+*.mp4 -filter -diff -merge
+*.wav -filter -diff -merge
